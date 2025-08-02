@@ -1,0 +1,83 @@
+/* src/styles/MyRecipesPage.css */
+
+.my-recipes-container {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.page-title {
+    font-size: 2.5rem;
+    color: #333;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.my-recipes-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #ccc;
+}
+
+.my-recipes-header p {
+    font-size: 1.2rem;
+    color: #555;
+    font-weight: 500;
+}
+
+.add-recipe-button {
+    background-color: #28a745;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+.add-recipe-button:hover {
+    background-color: #218838;
+}
+
+.my-recipes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.no-recipes-message {
+    text-align: center;
+    padding: 4rem 0;
+    color: #777;
+    font-size: 1.2rem;
+}
+
+.no-recipes-message .add-recipe-link {
+    display: inline-block;
+    margin-top: 1rem;
+    background-color: #007bff;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+.no-recipes-message .add-recipe-link:hover {
+    background-color: #0056b3;
+}
+
+.loading-message, .error-message {
+    text-align: center;
+    padding: 2rem;
+    font-size: 1.2rem;
+    color: #888;
+}
+
+.error-message {
+    color: #dc3545;
+}

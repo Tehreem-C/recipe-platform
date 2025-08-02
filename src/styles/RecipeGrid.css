@@ -1,0 +1,134 @@
+/* frontend/src/styles/RecipeGrid.css */
+
+.my-recipes-page-container {
+    padding: 20px;
+    background-color: #f7f4ef;
+    min-height: 100vh;
+}
+
+.my-recipes-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 20px;
+}
+
+.my-recipes-header h2 {
+    font-size: 2.5rem;
+    color: #1c2529;
+    margin: 0;
+}
+
+.button-create {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: background-color 0.3s;
+}
+
+.button-create:hover {
+    background-color: #45a049;
+}
+
+.recipe-grid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+.recipe-card-with-actions {
+    position: relative;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
+}
+
+.recipe-card-with-actions:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.recipe-actions {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-top: 1px solid #eee;
+}
+
+.edit-button,
+.delete-button {
+    flex-grow: 1;
+    text-align: center;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.edit-button {
+    background-color: #2196F3;
+    color: white;
+    text-decoration: none;
+}
+
+.edit-button:hover {
+    background-color: #1a7bb9;
+}
+
+.delete-button {
+    background-color: #f44336;
+    color: white;
+}
+
+.delete-button:hover {
+    background-color: #da190b;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 50px 20px;
+    color: #666;
+}
+
+.empty-state p {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+.empty-state p:first-child {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.loading-message, .error-message {
+    text-align: center;
+    padding: 20px;
+    font-size: 1.2rem;
+}
+
+.loading-message {
+    color: #4CAF50;
+}
+
+.error-message {
+    color: #f44336;
+}

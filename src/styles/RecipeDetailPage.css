@@ -1,0 +1,209 @@
+/* RecipeDetailPage.css */
+
+/* General container for the recipe detail page */
+.recipe-detail-container {
+    background-color: #F7F4EF; /* Consistent background color */
+    padding: 30px;
+    max-width: 1000px; /* Adjust max-width as needed for content readability */
+    margin: 0 auto;
+    box-sizing: border-box; /* Include padding in element's total width */
+}
+
+/* White card/container for the main recipe details */
+.recipe-detail-card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    margin-bottom: 30px; /* Space below the card */
+}
+
+/* Recipe image styling */
+.recipe-detail-image {
+    width: 100%;
+    max-height: 400px; /* Max height for the image */
+    object-fit: cover;
+    border-radius: 8px; /* Match card border-radius */
+    margin-bottom: 25px;
+}
+
+/* Recipe title */
+.recipe-detail-card h1 {
+    color: #4CAF50; /* Green for recipe title */
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 32px;
+}
+
+/* Recipe description */
+.recipe-detail-card p.description {
+    color: #555;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    text-align: center; /* Center align description if it's a short paragraph */
+}
+
+/* Recipe meta info (Prep, Cook, Servings) */
+.recipe-detail-meta {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #f9f9f9; /* Light background for meta section */
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 25px;
+    border: 1px solid #eee;
+}
+
+.recipe-detail-meta div {
+    text-align: center;
+    font-size: 15px;
+    color: #666;
+}
+
+.recipe-detail-meta div strong {
+    display: block;
+    color: #333;
+    font-size: 17px;
+    margin-bottom: 5px;
+}
+
+/* Tags section */
+.recipe-detail-tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 30px;
+}
+
+/* Tag styling (consistent with HomePage.css) */
+.recipe-detail-tags .tag {
+    background-color: #E0E0E0;
+    color: #555;
+    padding: 7px 12px;
+    border-radius: 3px;
+    font-size: 13px;
+    white-space: nowrap; /* Prevent tags from breaking lines awkwardly */
+}
+
+/* Specific tag colors (consistent with HomePage.css) */
+.recipe-detail-tags .tag.italian { background-color: #8BC34A; color: white; }
+.recipe-detail-tags .tag.main-course { background-color: #FFC107; color: #333; }
+.recipe-detail-tags .tag.vegetarian { background-color: #4CAF50; color: white; }
+.recipe-detail-tags .tag.asian { background-color: #2196F3; color: white; }
+.recipe-detail-tags .tag.high-protein { background-color: #F44336; color: white; }
+.recipe-detail-tags .tag.breakfast { background-color: #FF9800; color: white; }
+.recipe-detail-tags .tag.snack { background-color: #9C27B0; color: white; }
+.recipe-detail-tags .tag.vegan-option { background-color: #00BCD4; color: white; }
+.recipe-detail-tags .tag.gluten-free-option { background-color: #FFEB3B; color: #333; }
+.recipe-detail-tags .tag.baking { background-color: #CDDC39; color: #333; }
+.recipe-detail-tags .tag.comfort-food { background-color: #FF5722; color: white; }
+.recipe-detail-tags .tag.quick-easy { background-color: #607D8B; color: white; }
+.recipe-detail-tags .tag.pakistan { background-color: #4CAF50; color: white; }
+.recipe-detail-tags .tag.spicy { background-color: #D32F2F; color: white; }
+
+
+/* Ingredients and Instructions Section Styling */
+.ingredients-section,
+.instructions-section {
+    margin-bottom: 30px;
+}
+
+.ingredients-section h2,
+.instructions-section h2 {
+    color: #4CAF50; /* Green for headings (e.g., "Ingredients:", "Instructions:") */
+    margin-bottom: 15px;
+    font-size: 24px;
+    border-bottom: 2px solid #e0e0e0; /* Subtle line under headings */
+    padding-bottom: 5px;
+}
+
+.ingredients-section ul,
+.instructions-section ol {
+    list-style-type: disc; /* Bullet points for ingredients */
+    padding-left: 25px; /* Indent lists */
+    margin: 0;
+    color: #333; /* Darker text for readability */
+}
+
+.instructions-section ol {
+    list-style-type: decimal; /* Numbered list for instructions */
+}
+
+.ingredients-section li,
+.instructions-section li {
+    margin-bottom: 10px; /* Space between list items */
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Back button or navigation */
+.back-button {
+    display: block; /* Make it a block element to center or give full width */
+    width: fit-content; /* Adjust width to content */
+    margin: 0 auto 30px auto; /* Center the button and add margin below */
+    background-color: #6c757d; /* Gray color for a neutral back button */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #5a6268;
+}
+
+/* Responsive Adjustments for Recipe Detail Page */
+@media (max-width: 768px) {
+    .recipe-detail-container {
+        padding: 15px;
+    }
+
+    .recipe-detail-card {
+        padding: 20px;
+    }
+
+    .recipe-detail-card h1 {
+        font-size: 28px;
+    }
+
+    .recipe-detail-meta {
+        flex-direction: column; /* Stack meta info vertically */
+        gap: 10px;
+    }
+
+    .ingredients-section h2,
+    .instructions-section h2 {
+        font-size: 20px;
+    }
+
+    .ingredients-section li,
+    .instructions-section li {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .recipe-detail-card h1 {
+        font-size: 24px;
+    }
+
+    .recipe-detail-card p.description {
+        font-size: 14px;
+    }
+
+    .ingredients-section h2,
+    .instructions-section h2 {
+        font-size: 18px;
+    }
+
+    .ingredients-section li,
+    .instructions-section li {
+        font-size: 14px;
+    }
+}

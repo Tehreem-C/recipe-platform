@@ -1,0 +1,44 @@
+/* src/styles/AuthForms.css */
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 60px); /* Full viewport height minus navbar */
+  background-color: #D8C9AE; /* Pale Sand background */
+  padding: 20px;
+  box-sizing: border-box; /* Include padding in element's total width and height */
+}
+
+.auth-form-card {
+  background-color: #FFFFFF; /* White background for the form card */
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px; /* Max width for forms */
+  text-align: center;
+}
+
+.auth-form-card h2 {
+  font-size: 2.2em;
+  color: #1C2529; /* Shadowed Green for heading */
+  margin-bottom: 30px;
+}
+
+.auth-switch-text {
+  margin-top: 25px;
+  font-size: 0.9em;
+  color: #575757; /* Charcoal Gray */
+}
+
+.auth-switch-text a {
+  color: #1C2529; /* Shadowed Green link */
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.2s ease;
+}
+
+.auth-switch-text a:hover {
+  color: #A1D1B1; /* Mint Green on hover */
+  text-decoration: underline;
+}

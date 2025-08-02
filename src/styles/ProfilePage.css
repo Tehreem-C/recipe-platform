@@ -1,0 +1,48 @@
+/* src/styles/ProfilePage.css */
+
+.profile-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Align to top in case content is short */
+  min-height: calc(100vh - 60px); /* Full viewport height minus navbar */
+  padding: 40px 20px;
+  box-sizing: border-box;
+  background-color: #F7F4EF; /* Almond Slate light background, same as App.css wrapper */
+}
+
+.profile-card {
+  background-color: #FFFFFF; /* White background for the card */
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px; /* Max width for profile content */
+  text-align: left;
+}
+
+.profile-card h2 {
+  font-size: 2em;
+  color: #1C2529; /* Shadowed Green */
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.profile-card p {
+  font-size: 1.1em;
+  color: #575757; /* Charcoal Gray */
+  margin-bottom: 15px;
+}
+
+.profile-card p strong {
+  color: #1C2529; /* Darker emphasis */
+}
+
+.profile-card .button-secondary {
+  margin-top: 30px;
+  width: auto; /* Allow button to size to content */
+  padding-left: 30px;
+  padding-right: 30px;
+  display: block; /* Make it a block element */
+  margin-left: auto; /* Center button */
+  margin-right: auto; /* Center button */
+}

@@ -1,0 +1,136 @@
+/* frontend/src/styles/ModifyRecipePage.css */
+
+/* Container centers the form on the page */
+.container {
+  min-height: 100vh;
+  background: #f5f7fa; /* Light background for the page */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 20px;
+}
+
+/* Form styling */
+.recipe-form {
+  background: #fff; /* White background for the form itself */
+  padding: 30px 40px;
+  width: 420px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+.recipe-form h2 {
+  text-align: center;
+  color: #2c3e50; /* Darker text for headings */
+  margin-bottom: 25px;
+  font-weight: 700;
+  font-size: 28px;
+  letter-spacing: 1px;
+}
+
+/* Label Styling */
+.recipe-form label {
+  display: block; /* Ensures labels are on their own line */
+  font-size: 14px;
+  color: #555; /* Medium grey for labels */
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+/* Inputs Full Width */
+.recipe-form input[type="text"],
+.recipe-form input[type="number"], /* Added type="number" for servings */
+.recipe-form textarea {
+  width: 100%; /* Make inputs take full width of their container */
+  padding: 10px 12px;
+  margin-bottom: 18px; /* Space below each input */
+  font-size: 15px;
+  border: 1.8px solid #d1d8e0; /* Light border */
+  border-radius: 8px;
+  transition: border-color 0.3s ease; /* Smooth transition for focus effect */
+  resize: vertical; /* Allow textareas to be resized vertically */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.recipe-form textarea {
+  min-height: 80px; /* Minimum height for description textarea */
+}
+
+/* Inputs focus effect */
+.recipe-form input[type="text"]:focus,
+.recipe-form input[type="number"]:focus,
+.recipe-form textarea:focus {
+  border-color: #f4623a; /* Accent color on focus */
+  outline: none; /* Remove default outline */
+  box-shadow: 0 0 8px rgba(244, 98, 58, 0.3); /* Subtle glow on focus */
+}
+
+/* Time and servings group for side-by-side layout */
+.time-servings {
+  display: flex; /* Use flexbox for horizontal layout */
+  gap: 16px; /* Space between the input groups */
+  margin-bottom: 18px;
+  justify-content: space-between; /* Distribute items with space between them */
+}
+
+.input-group {
+  flex: 1; /* Each input group takes equal available space */
+}
+
+.input-group label {
+  margin-bottom: 6px;
+}
+
+/* Button styling */
+.submit-btn {
+  width: 100%; /* Button takes full width of the form */
+  background-color: #d2691e; /* Earthy brown for the button */
+  color: #fff;
+  border: none;
+  padding: 12px 15px;
+  border-radius: 8px;
+  font-size: 17px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+  letter-spacing: 1px;
+}
+
+.submit-btn:hover {
+  background-color: #a6520f; /* Darker brown on hover */
+}
+
+/* Error message styling - assuming you want to keep this consistent */
+.error-message {
+  color: #d9534f; /* A red color for errors */
+  background-color: #f2dede; /* Light red background */
+  border: 1px solid #ebccd1; /* Red border */
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 0.9em;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .recipe-form {
+    padding: 25px 30px;
+    width: 90%; /* Make form more responsive on smaller screens */
+    max-width: 420px; /* Maintain max-width */
+  }
+
+  .time-servings {
+    flex-direction: column; /* Stack time/servings vertically on small screens */
+    gap: 0; /* Remove gap when stacked */
+  }
+
+  .input-group {
+    margin-bottom: 18px; /* Add back margin for stacked groups */
+  }
+
+  .input-group:last-child {
+    margin-bottom: 0; /* No margin below the last stacked group */
+  }
+}

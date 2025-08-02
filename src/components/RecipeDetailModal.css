@@ -1,0 +1,130 @@
+/* src/components/RecipeDetailModal.css */
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7); /* Dark semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Ensure it's on top of everything */
+  padding: 20px; /* Add some padding for smaller screens */
+  overflow-y: auto; /* Enable scrolling if content overflows */
+}
+
+.modal-content {
+  background-color: #F7F4EF; /* Light off-white background from your theme */
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 800px; /* Max width for the modal content */
+  width: 95%; /* Take up most of the screen width */
+  max-height: 90vh; /* Max height to prevent overflow on very small screens */
+  overflow-y: auto; /* Enable scrolling within the modal content */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Space between sections */
+}
+
+.modal-close-button {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 2.5em;
+  color: #575757; /* Charcoal Gray */
+  cursor: pointer;
+  padding: 5px;
+  line-height: 1; /* Adjust line height to center 'x' */
+  transition: color 0.2s ease;
+}
+
+.modal-close-button:hover {
+  color: #1C2529; /* Shadowed Green on hover */
+}
+
+.modal-image {
+  max-width: 100%;
+  height: 300px; /* Fixed height for consistency */
+  object-fit: cover; /* Crop to fit */
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.modal-title {
+  color: #1C2529; /* Shadowed Green */
+  font-size: 2.2em;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.modal-description {
+  color: #575757; /* Charcoal Gray */
+  font-size: 1.1em;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.modal-details {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap; /* Allow wrapping on small screens */
+  gap: 15px;
+  margin-bottom: 20px;
+  padding: 10px 0;
+  border-top: 1px solid #E0E0E0;
+  border-bottom: 1px solid #E0E0E0;
+}
+
+.modal-details span {
+  font-size: 1.05em;
+  color: #575757;
+  font-weight: 500;
+}
+
+.modal-section h3 {
+  color: #1C2529;
+  font-size: 1.6em;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #A1D1B1; /* Mint Green accent */
+  padding-bottom: 5px;
+  display: inline-block; /* To make border-bottom only span text */
+}
+
+.modal-ingredients-list,
+.modal-instructions-list {
+  list-style-type: disc; /* Or 'decimal' for instructions */
+  padding-left: 25px;
+  color: #575757;
+  font-size: 1.05em;
+  line-height: 1.8;
+}
+
+.modal-ingredients-list li::marker,
+.modal-instructions-list li::marker {
+  color: #A1D1B1; /* Mint Green for list bullets/numbers */
+}
+
+.modal-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+  justify-content: center; /* Center tags at the bottom */
+}
+
+.modal-tag {
+  display: inline-block;
+  background-color: #A1D1B1; /* Mint Green */
+  color: #1C2529; /* Shadowed Green */
+  padding: 6px 15px;
+  border-radius: 25px;
+  font-size: 0.9em;
+  font-weight: 500;
+  text-transform: capitalize;
+}

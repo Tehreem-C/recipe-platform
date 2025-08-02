@@ -1,0 +1,207 @@
+/* src/styles/HomePage.css */
+
+.home-page-container {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-bottom: 0;
+}
+
+.main-heading {
+  font-size: 3.2rem;
+  color: var(--primary-color);
+  text-align: center;
+  margin-bottom: 4rem;
+  font-weight: 700;
+}
+
+.search-filter-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 4rem;
+}
+
+/* SPECIFIC STYLES FOR HOME PAGE SEARCH INPUT (LARGE) */
+.search-input-lg { /* This class is applied to the main search bar */
+  width: 100%;
+  max-width: 600px; /* Wider search bar */
+  padding: 18px 20px; /* Larger padding */
+  border: 1px solid var(--border-color);
+  border-radius: 12px; /* More rounded corners */
+  font-size: 1.25rem; /* Larger font size */
+  background-color: var(--card-background);
+  color: var(--text-dark);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08); /* Subtle shadow */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box; /* Crucial for width calculation */
+}
+
+.search-input-lg::placeholder {
+  color: #A0A0A0;
+}
+
+.search-input-lg:focus {
+  border-color: var(--secondary-color);
+  box-shadow: 0 0 0 4px rgba(255, 224, 178, 0.4);
+  outline: none;
+}
+
+
+/* SPECIFIC STYLES FOR HOME PAGE DROPDOWNS (MEDIUM) */
+.filter-dropdown {
+  padding: 12px 18px; /* Consistent with previous, but ensuring it's not tiny */
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  font-size: 1.05rem;
+  background-color: var(--card-background);
+  color: var(--text-dark);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.filter-dropdown:focus {
+  border-color: var(--secondary-color);
+  box-shadow: 0 0 0 3px rgba(255, 224, 178, 0.4);
+  outline: none;
+}
+
+.ingredients-search-card {
+  background-color: var(--card-background);
+  padding: 2.5rem 3rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  margin-top: 3.5rem;
+  margin-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ingredients-search-card h2 {
+  color: var(--primary-color);
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  font-size: 2.2rem;
+}
+
+/* SPECIFIC STYLES FOR HOME PAGE INGREDIENTS TEXTAREA (LARGE) */
+.ingredients-textarea-lg { /* This class is applied to the ingredients textarea */
+  width: calc(100% - 40px); /* Full width minus padding, adjusted for larger padding */
+  padding: 20px; /* Larger padding for textarea */
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  font-size: 1.15rem; /* Larger font size */
+  background-color: var(--background-light);
+  color: var(--text-dark);
+  box-sizing: border-box;
+  resize: vertical;
+  min-height: 150px; /* More height for ingredients textarea */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+}
+
+.ingredients-textarea-lg:focus {
+  border-color: var(--secondary-color);
+  box-shadow: 0 0 0 4px rgba(255, 224, 178, 0.4);
+  outline: none;
+}
+
+
+/* SPECIFIC STYLES FOR HOME PAGE BUTTON (LARGE) */
+.search-button-lg { /* This class is applied to the "Find Recipes" button */
+    padding: 15px 30px; /* Larger padding for the button */
+    font-size: 1.3rem; /* Larger font size for the button */
+    border-radius: 10px; /* Slightly more rounded corners */
+    margin-top: 1.8rem; /* Space above the button */
+    /* Inherits colors from .button-primary in App.css */
+}
+
+
+.find-recipes-button {
+  margin-top: 1.8rem;
+}
+
+.section-heading {
+  font-size: 2.8rem;
+  color: var(--primary-color);
+  text-align: center;
+  margin-top: 3.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.recipe-list {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.no-recipes-message {
+  text-align: center;
+  color: var(--text-dark);
+  font-size: 1.2rem;
+  padding: 2.5rem;
+  background-color: var(--card-background);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  margin-top: 1.5rem;
+  margin-bottom: 0;
+}
+
+/* Responsive adjustments for HomePage specific elements */
+@media (max-width: 768px) {
+  .home-page-container {
+    padding: 1rem;
+  }
+
+  .main-heading {
+    font-size: 2.2rem;
+    margin-bottom: 1.8rem;
+  }
+
+  .search-filter-section {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .filter-dropdown,
+  .search-input-lg {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .ingredients-search-card {
+    padding: 1.5rem 2rem;
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+    align-items: stretch;
+  }
+
+  .ingredients-search-card h2 {
+    font-size: 1.8rem;
+  }
+
+  .ingredients-textarea-lg {
+    min-height: 120px;
+  }
+
+  .section-heading {
+    font-size: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .no-recipes-message {
+    padding: 2rem;
+  }
+
+  /* Ensure button takes full width in mobile view */
+  .search-button-lg {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}

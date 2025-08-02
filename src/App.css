@@ -1,0 +1,221 @@
+/* src/styles/App.css */
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #F7F4EF; /* Almond Slate light background */
+    color: #1C2529; /* Shadowed Green for default text color */
+}
+
+/* Main content wrapper to give consistent padding/margin around page content */
+.App-content-wrapper {
+    padding: 20px;
+    max-width: 1200px; /* Max width for content */
+    margin: 0 auto; /* Center content */
+    min-height: calc(100vh - 60px - 40px); /* Full viewport height minus navbar and padding */
+    box-sizing: border-box; /* Include padding in height calculation */
+}
+
+.app-global-loading {
+    text-align: center;
+    padding: 100px;
+    font-size: 1.5em;
+    color: #575757; /* Charcoal Gray */
+}
+
+/* Basic utility classes */
+.button-primary {
+    background-color: #1C2529; /* Shadowed Green */
+    color: #FFFFFF;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.button-primary:hover {
+    background-color: #0d1214; /* Slightly darker */
+    transform: translateY(-1px);
+}
+
+.button-primary:disabled {
+    background-color: #7A7A7A; /* Almond Slate dark */
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+.button-secondary {
+    background-color: #A1D1B1; /* Mint Green */
+    color: #1C2529; /* Shadowed Green */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.button-secondary:hover {
+    background-color: #8ac09c; /* Slightly darker mint */
+    transform: translateY(-1px);
+}
+
+.error-message {
+    background-color: #ffe0e0;
+    color: #cc0000;
+    border: 1px solid #ff9999;
+    padding: 12px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    font-size: 0.95em;
+    text-align: center;
+}
+
+.success-message {
+    background-color: #e0ffe0;
+    color: #008000;
+    border: 1px solid #99ff99;
+    padding: 12px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    font-size: 0.95em;
+    text-align: center;
+}
+
+/* General form group styling for consistency */
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #575757;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"],
+.form-group input[type="number"],
+.form-group textarea,
+.form-group select {
+    width: calc(100% - 20px); /* Account for padding */
+    padding: 10px;
+    border: 1px solid #CFCBBD; /* Almond Slate light border */
+    border-radius: 5px;
+    font-size: 1em;
+    box-sizing: border-box;
+    outline: none;
+    transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    border-color: #A1D1B1; /* Mint Green on focus */
+    box-shadow: 0 0 0 2px rgba(161, 209, 177, 0.4);
+}
+
+/* --- Navbar Styling --- */
+/* Note: If you have a separate Navbar.css, these might be redundant or overridden. */
+/* If you want to use Navbar.css, ensure it's imported in Navbar.js and these are removed/adjusted. */
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Pushes brand to left, links to right */
+    align-items: center; /* Vertically aligns items */
+    background-color: #F7F4EF; /* <-- REVERTED TO THIS COLOR */
+    padding: 15px 30px; /* More generous padding */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* Stronger shadow for depth */
+    width: 100%;
+    box-sizing: border-box;
+    position: sticky; /* Makes navbar stick to top on scroll */
+    top: 0;
+    z-index: 1000; /* Ensures it's above other content */
+}
+
+.navbar-brand {
+    font-size: 1.8em; /* Larger brand text */
+    font-weight: bold;
+    color: #1C2529; /* Shadowed Green for brand (good contrast on light background) */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.navbar-brand:hover {
+    color: #A1D1B1; /* Mint Green on hover */
+}
+
+.navbar-nav {
+    list-style: none; /* REMOVE BULLET POINTS */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Arrange list items horizontally */
+    gap: 25px; /* More space between nav items */
+    align-items: center; /* Align items vertically in the list */
+}
+
+.navbar-nav li {
+    margin: 0;
+}
+
+.navbar-nav a, .navbar-nav button {
+    color: #1C2529; /* Shadowed Green for links/buttons (good contrast on light background) */
+    text-decoration: none;
+    padding: 8px 15px; /* Padding for click/tap area */
+    border-radius: 8px; /* Rounded corners for links/buttons */
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.1s ease;
+    font-weight: 500;
+    font-size: 1.05em; /* Slightly larger font */
+    white-space: nowrap; /* Prevent wrapping */
+    border: none; /* Ensure no default button border */
+    background: none; /* Ensure no default button background */
+    cursor: pointer; /* Indicate clickable */
+}
+
+.navbar-nav a:hover, .navbar-nav button:hover {
+    background-color: #A1D1B1; /* Mint Green background on hover */
+    color: #FFFFFF; /* White text on hover */
+    transform: translateY(-1px); /* Slight lift effect */
+}
+
+.navbar-nav .navbar-button {
+    /* Inherits styles from .navbar-nav a, .navbar-nav button */
+}
+
+/* Responsive adjustments for smaller screens (optional, but good practice) */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column; /* Stack items vertically */
+        align-items: flex-start; /* Align to the left */
+        padding: 15px 20px;
+    }
+
+    .navbar-brand {
+        margin-bottom: 10px; /* Space below brand when stacked */
+    }
+
+    .navbar-nav {
+        flex-direction: column; /* Stack nav items vertically */
+        width: 100%; /* Full width for stacked items */
+        gap: 10px; /* Smaller gap when stacked */
+        align-items: flex-start; /* Align stacked items to the left */
+    }
+
+    .navbar-nav li {
+        width: 100%; /* Full width for each stacked item */
+    }
+
+    .navbar-nav a, .navbar-nav button {
+        width: calc(100% - 30px); /* Full width minus padding */
+        text-align: left; /* Align text to left */
+    }
+}

@@ -1,0 +1,117 @@
+/* src/styles/Navbar.css */
+
+/* Main Navbar Container */
+.navbar {
+    background-color: #c1e2f0; /* Shadowed Green for the navbar */
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between; /* Pushes brand to left, links to right */
+    align-items: center; /* Vertically aligns items */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    min-height: 60px; /* Consistent height */
+    width: 100%; /* Ensure it spans full width */
+    box-sizing: border-box; /* Include padding in width */
+    position: sticky; /* Makes navbar stick to top on scroll */
+    top: 0;
+    z-index: 1000; /* Ensures it's above other content */
+}
+
+/* Navbar Brand (Recipe App text) */
+.navbar-brand {
+    color: #1C2529; /* Changed to Shadowed Green for brand text for better contrast on light background */
+    font-size: 1.8em;
+    font-weight: bold;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+    transition: color 0.2s ease; /* Smooth transition for hover */
+}
+
+.navbar-brand:hover {
+    color: #FAFBF5; /* Ivory Forest light on hover */
+}
+
+
+/* Navigation List (ul) - This was the main fix */
+.navbar-nav { /* This class is on your <ul> in Navbar.js */
+    list-style: none; /* REMOVE BULLET POINTS */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Arrange list items horizontally */
+    align-items: center; /* Vertically align items in the list */
+    gap: 25px; /* Spacing between nav items */
+}
+
+/* Navigation List Items (li) */
+.navbar-nav li {
+    margin: 0; /* Remove default margin from list items */
+}
+
+/* Navigation Links (a) and Buttons */
+.navbar-nav a, .navbar-nav button { /* Target both links and buttons */
+    color: #1C2529; /* Shadowed Green for nav items */
+    text-decoration: none;
+    font-size: 1.05em;
+    transition: color 0.2s ease, background-color 0.2s ease, transform 0.1s ease;
+    white-space: nowrap; /* Prevent text from wrapping */
+    padding: 8px 15px; /* Add padding for better click/tap area */
+    border-radius: 5px; /* Slightly rounded corners */
+    background: none; /* Ensure no default button background */
+    border: none; /* Ensure no default button border */
+    cursor: pointer; /* Indicate clickable */
+    font-weight: 500; /* Match other nav items */
+}
+
+.navbar-nav a:hover, .navbar-nav button:hover {
+    color: #FAFBF5; /* Ivory Forest light on hover */
+    background-color: #A1D1B1; /* Mint Green background on hover */
+    transform: translateY(-1px); /* Slight lift effect */
+}
+
+/* Specific style for the Logout button */
+.navbar-nav .navbar-button {
+    background-color: #A1D1B1; /* Mint Green for buttons */
+    color: #1C2529; /* Shadowed Green for button text */
+    /* Inherits padding, border, etc. from .navbar-nav a, .navbar-nav button */
+}
+
+.navbar-nav .navbar-button:hover {
+    background-color: #8ac09c; /* Slightly darker mint green */
+    color: #FAFBF5; /* Ivory Forest light on hover */
+}
+
+
+.loading-nav-item {
+    font-style: italic;
+    opacity: 0.8;
+    color: #1C2529; /* Ensure visibility */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column; /* Stack items vertically */
+        padding: 15px 20px;
+        align-items: flex-start; /* Align to left when stacked */
+    }
+
+    .navbar-brand {
+        margin-bottom: 10px; /* Space below brand when stacked */
+    }
+
+    .navbar-nav { /* Target the ul directly */
+        margin-top: 15px;
+        flex-direction: column; /* Stack nav items vertically */
+        width: 100%; /* Full width for stacked items */
+        gap: 10px; /* Reduce gap on smaller screens */
+        align-items: flex-start; /* Align stacked items to the left */
+    }
+
+    .navbar-nav li {
+        width: 100%; /* Each list item takes full width */
+    }
+
+    .navbar-nav a, .navbar-nav button {
+        width: calc(100% - 30px); /* Full width minus padding */
+        text-align: left; /* Align text to left */
+    }
+}

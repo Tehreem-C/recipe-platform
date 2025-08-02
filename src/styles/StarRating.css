@@ -1,0 +1,25 @@
+/* src/styles/StarRating.css */
+.star-rating {
+    display: flex;
+    font-size: 1.5em; /* Adjust star size */
+    color: #ccc; /* Default color for outline stars */
+}
+
+.star {
+    margin: 0 1px; /* Smaller gap between stars */
+    transition: transform 0.1s ease-in-out, color 0.2s ease;
+    cursor: pointer; /* Default cursor for interactive stars */
+}
+
+.star.read-only {
+    cursor: default; /* No pointer for read-only stars */
+}
+
+.star:hover:not(.read-only) {
+    transform: scale(1.1);
+    color: #ffcc00; /* Highlight color on hover for interactive stars */
+}
+
+.star.filled {
+    color: #ffcc00; /* Gold color for filled stars */
+}

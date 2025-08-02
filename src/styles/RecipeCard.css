@@ -1,0 +1,172 @@
+/* src/styles/RecipeCard.css */
+
+.recipe-card {
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    position: relative; /* Needed for absolute positioning of favorite button */
+}
+
+.recipe-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+.recipe-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.recipe-card-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.recipe-card-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.recipe-card-title {
+    font-size: 1.4em;
+    color: #1C2529;
+    margin-top: 0;
+    margin-bottom: 10px;
+    transition: color 0.2s ease;
+}
+
+.recipe-card-title:hover {
+    color: #A1D1B1;
+}
+
+.recipe-card-description {
+    font-size: 0.95em;
+    color: #575757;
+    line-height: 1.5;
+    margin-bottom: 8px; /* Reduced from 15px */
+    flex-grow: 1;
+}
+
+/* MODIFIED: .recipe-card-details for Prep/Cook/Servings */
+.recipe-card-details {
+    display: flex;
+    flex-direction: column;
+    gap: 5px; /* Small gap between each Prep/Cook/Servings line */
+    font-size: 0.85em;
+    color: #7A7A7A;
+    margin-bottom: 15px; /* Space below the details block */
+    text-align: left; /* Ensure left alignment */
+}
+
+.recipe-card-details p {
+    margin: 0; /* Remove default paragraph margins to control gap with 'gap' property */
+}
+
+/* NEW: Separator line above tags */
+.recipe-card-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: auto;
+    padding-top: 15px; /* Space above the line */
+    border-top: 1px solid #F0F0F0; /* Light gray separator line above tags */
+}
+
+.tag-item {
+    background-color: #E0E0E0;
+    color: #333;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.75em;
+    font-weight: bold;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+/* NEW: No tags styling */
+.no-tags {
+    font-size: 0.8em;
+    color: #999;
+    padding: 5px 0;
+}
+
+/* Specific tag colors based on your images */
+.tag-item.Italian { background-color: #B0E0E6; color: #333; }
+.tag-item.Main-Course { background-color: #ADD8E6; color: #333; }
+.tag-item.Vegetarian { background-color: #90EE90; color: #333; }
+.tag-item.Asian { background-color: #F0E68C; color: #333; }
+.tag-item.High-Protein { background-color: #DDA0DD; color: #333; }
+.tag-item.Snack { background-color: #FFE4E1; color: #333; }
+.tag-item.Vegan-Option { background-color: #7FFFD4; color: #333; }
+.tag-item.Breakfast { background-color: #FFD700; color: #333; }
+.tag-item.Gluten-Free-Option { background-color: #FAFAD2; color: #333; }
+.tag-item.Soup { background-color: #FFB6C1; color: #333; }
+.tag-item.Lunch { background-color: #B0C4DE; color: #333; }
+.tag-item.Comfort-Food { background-color: #F5DEB3; color: #333; }
+.tag-item.Spicy { background-color: #FF6347; color: #FFF; }
+.tag-item.Curry { background-color: #DAA520; color: #FFF; }
+.tag-item.Quick-Easy { background-color: #AFEEEE; color: #333; }
+.tag-item.Cheese { background-color: #FFDAB9; color: #333; }
+.tag-item.Indulgent { background-color: #EE82EE; color: #FFF; }
+.tag-item.Healthy { background-color: #3CB371; color: #FFF; }
+.tag-item.Baking { background-color: #F8F8FF; color: #333; }
+.tag-item.Pakistani { background-color: #9ACD32; color: #333; }
+.tag-item.Indian { background-color: #FFA500; color: #FFF; }
+
+/* NEW: Favorite Button Styling */
+.favorite-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(255, 255, 255, 0.8);
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 1.2em;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 10; /* Ensure it's above other content */
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.favorite-button:hover {
+    background: rgba(255, 255, 255, 1);
+    transform: scale(1.1);
+}
+
+.favorite-button svg {
+    /* Styles for the heart icon inside the button */
+    pointer-events: none; /* Allows click to pass through to button */
+}
+/* src/styles/RecipeCard.css */
+
+/* ... (previous RecipeCard styles) ... */
+
+/* NEW: Average Rating on card */
+.recipe-card-average-rating {
+    font-size: 0.9em;
+    color: #555;
+    margin-bottom: 5px; /* Small space below rating */
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.recipe-card-average-rating span {
+    font-weight: bold;
+}

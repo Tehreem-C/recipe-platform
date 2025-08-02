@@ -1,0 +1,124 @@
+/* frontend/src/styles/HealthProfileForm.css */
+
+.health-profile-form {
+    background-color: #FFFFFF; /* White background for the form container */
+    padding: 40px;
+    border-radius: 12px; /* More rounded corners */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Deeper shadow */
+    max-width: 800px; /* Max width for the form */
+    margin: 40px auto; /* Center the form with more vertical margin */
+    text-align: center; /* Center the heading */
+    color: #1C2529; /* Shadowed Green for text */
+}
+
+.health-profile-form h2 {
+    font-size: 2.5em; /* Larger heading */
+    color: #1C2529; /* Shadowed Green */
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+.health-profile-form .error-message,
+.health-profile-form .success-message {
+    margin-bottom: 20px;
+    padding: 15px;
+    font-size: 1.05em;
+    border-radius: 8px;
+}
+
+.health-profile-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px; /* Space between fieldsets */
+}
+
+.health-profile-form fieldset {
+    border: 1px solid #CFCBBD; /* Almond Slate light border */
+    border-radius: 10px;
+    padding: 25px;
+    margin: 0; /* Remove default fieldset margin */
+    background-color: #FDFBF8; /* Slightly off-white for fieldset background */
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.05); /* Inner shadow */
+}
+
+.health-profile-form legend {
+    font-size: 1.4em; /* Larger legend text */
+    font-weight: bold;
+    color: #575757; /* Charcoal Gray */
+    padding: 0 10px;
+    margin-left: -10px; /* Adjust legend position */
+    background-color: #FFFFFF; /* Match container background */
+    border-radius: 5px;
+}
+
+.checkbox-group {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Responsive grid for checkboxes */
+    gap: 15px; /* Space between checkboxes */
+    margin-top: 15px;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Space between checkbox and label text */
+    font-size: 1.1em;
+    color: #333; /* Darker text for labels */
+    cursor: pointer;
+    user-select: none; /* Prevent text selection on double click */
+}
+
+.checkbox-label input[type="checkbox"] {
+    /* Hide default checkbox */
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #A1D1B1; /* Mint Green border */
+    border-radius: 4px;
+    background-color: #FFFFFF;
+    cursor: pointer;
+    position: relative;
+    flex-shrink: 0; /* Prevent checkbox from shrinking */
+    transition: all 0.2s ease;
+}
+
+.checkbox-label input[type="checkbox"]:checked {
+    background-color: #A1D1B1; /* Mint Green when checked */
+    border-color: #A1D1B1;
+}
+
+.checkbox-label input[type="checkbox"]:checked::after {
+    content: '✔'; /* Checkmark symbol */
+    font-size: 14px;
+    color: #FFFFFF; /* White checkmark */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    line-height: 1; /* Align checkmark vertically */
+}
+
+.checkbox-label input[type="checkbox"]:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(161, 209, 177, 0.5); /* Focus ring */
+}
+
+.health-profile-form button[type="submit"] {
+    /* Inherits from .button-primary in App.css */
+    margin-top: 20px;
+    align-self: center; /* Center the button */
+    min-width: 250px; /* Increased width */
+    padding: 15px 30px; /* Increased padding for larger size */
+    font-size: 1.25em; /* Larger font size */
+    border-radius: 8px; /* Slightly more rounded */
+    /* Ensure it still inherits colors from .button-primary in App.css */
+}
+
+.loading-message, .not-authenticated-message {
+    text-align: center;
+    padding: 50px;
+    font-size: 1.2em;
+    color: #575757;
+}

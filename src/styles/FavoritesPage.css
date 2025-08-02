@@ -1,0 +1,16 @@
+/* src/styles/FavoritesPage.css */
+
+.favorites-page-container {
+    /* Add any specific styles for your favorites page container here */
+    /* e.g., background, padding, etc. */
+}
+
+.favorites-page-container.loading-state,
+.favorites-page-container.error-state {
+    text-align: center;
+    padding: 50px 20px;
+    font-size: 1.2em;
+    color: #777;
+}
+
+/* You can override or add to HomePage.css styles if needed for this page */
